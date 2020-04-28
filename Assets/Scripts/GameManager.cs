@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Object brick;
+    public Object ball;
     private Object currentBrick;
     public Text countText;
     public int countBrick = 0;
@@ -15,7 +16,14 @@ public class GameManager : MonoBehaviour
     }
     void FixedUpdate()
     {
-        countText.text = "Bricks Left: " + countBrick.ToString();
+        if (ball.ballGone == false)
+        {
+            countText.text = "GAME OVER";
+        }
+        else
+        {
+            countText.text = "Bricks Left: " + countBrick.ToString();
+        }
     }
 
     void GenerateBrick()
