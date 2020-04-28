@@ -5,7 +5,6 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     new Rigidbody2D rigidbody;
-    public bool ballGone = false;
     public float ballSpeed = 7f;
     private float randomizer = 0;
 
@@ -23,10 +22,6 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.name == "DeadZone")
-        {
-            ballGone = true;
-        }
         randomizer = Random.Range(-1.0f, 1.0f);
         rigidbody.velocity = new Vector2(
             rigidbody.velocity.x + randomizer,

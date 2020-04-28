@@ -6,23 +6,25 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Object brick;
-    public Object ball;
+    DeadZone deadZone;
     private Object currentBrick;
-    public Text countText;
+    private Text text;
     public int countBrick = 0;
     void Start()
     {
+        deadZone = GameObject.Find("DeadZone").GetComponent<DeadZone>();
+        text = GameObject.Find("Text").GetComponent<Text>();
         GenerateBrick();
     }
     void FixedUpdate()
     {
-        if (ball.ballGone == false)
+        if (deadZone.ballGone == true)
         {
-            countText.text = "GAME OVER";
+            text.text = "GAME OVER";
         }
         else
         {
-            countText.text = "Bricks Left: " + countBrick.ToString();
+            text.text = "Bricks Left: " + countBrick.ToString();
         }
     }
 
