@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 402025463}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de00afc1870479845a0b99e61661ca8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballSpeed: 7
+  ballSpeed: 5
 --- !u!4 &402025467
 Transform:
   m_ObjectHideFlags: 0
@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 1420998218}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

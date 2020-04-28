@@ -6,14 +6,17 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public Object brick;
-    DeadZone deadZone;
+    private DeadZone deadZone;
     private Object currentBrick;
     private Text text;
     public int countBrick = 0;
-    void Start()
+    private void Awake()
     {
         deadZone = GameObject.Find("DeadZone").GetComponent<DeadZone>();
         text = GameObject.Find("Text").GetComponent<Text>();
+    }
+    void Start()
+    {
         GenerateBrick();
     }
     void FixedUpdate()

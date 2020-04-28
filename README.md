@@ -1,2 +1,8 @@
+# In Development
+
 # Breakout
-Breakout game made with Unity
+This is Breakout game made with Unity.
+
+# Development Environment
+* Unity 2018.4
+* Visual Studio Code
