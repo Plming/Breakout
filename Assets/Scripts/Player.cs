@@ -11,10 +11,11 @@ public class Player : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        Vector2 velocity = new Vector2(playerSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0);
-        //transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0, 0);
-        rigidbody.MovePosition(rigidbody.position + velocity);
+        float inputX;
+        inputX=Input.GetAxisRaw("Horizontal");
+        Vector2 newVelocity = new Vector2(playerSpeed * inputX, 0);
+        rigidbody.velocity = newVelocity;
     }
 }
